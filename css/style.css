@@ -1,5 +1,9 @@
 :root{
     --dark: #212121;
+    --primary: #FFC107;
+    --second: #0097A7;
+    --selected:#066974;
+    --widthScreen: 1200px;
 }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
@@ -10,6 +14,10 @@ html {
   }
 *, *:before, *:after {
     box-sizing: inherit;
+}
+
+h1,h2,h3{
+    margin: 0;
 }
 
 body{
@@ -26,7 +34,7 @@ body{
 
 
 .header nav{
-    max-width: 1200px;
+    max-width: var(--widthScreen);
     margin: 0 auto;
     padding: 2rem 0;
     display: flex;
@@ -77,4 +85,63 @@ body{
     color: white;
     z-index: 1;
 }
+
+.container-hero p{
+    font-size: 2rem;
+}
+
+.container-hero i{
+    color: var(--primary);
+    font-size: 4rem;
+}
+
+.container-hero a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 2rem;
+}
+
+.container-hero .boton{
+    background-color: var(--second);
+    padding: 1rem 5rem;
+    display: inline-block;
+    margin: 1rem;
+    border-bottom: .6rem solid #074a52;
+}
+
+.container-hero .boton:hover{
+    background-color: var(--selected);
+}
+
+.container{
+    max-width: var(--widthScreen);
+    margin: 0 auto;
+    background-color: whitesmoke;
+    border-radius: 1rem;
+}
+
+.site-main{
+    margin-top: 3rem;
+}
+
+.site-main h2{
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.site-services{
+    display: flex;
+    justify-content: space-between;
+    flex-basis: calc(100);
+    
+}
+
+@media (max-width: 768px){
+    .site-services{
+        flex-direction: column;
+    }
+}
+
 
