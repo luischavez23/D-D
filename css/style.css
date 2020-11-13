@@ -18,6 +18,7 @@ html {
 
 h1,h2,h3{
     margin: 0;
+    text-align: center;
 }
 
 body{
@@ -120,22 +121,45 @@ body{
     margin: 0 auto;
     background-color: whitesmoke;
     border-radius: 1rem;
+    -webkit-box-shadow: 7px 10px 3px -1px rgba(0,0,0,0.38);
+    -moz-box-shadow: 7px 10px 3px -1px rgba(0,0,0,0.38);
+    box-shadow: 7px 10px 3px -1px rgba(0,0,0,0.38);
 }
 
 .site-main{
-    margin-top: 3rem;
+    margin: 3rem auto;
 }
 
 .site-main h2{
-    padding-top: 2rem;
-    text-align: center;
+    padding: 3rem 0;
 }
 
 .site-services{
     display: flex;
-    justify-content: space-between;
-    flex-basis: calc(100);
-    
+    justify-content: space-evenly;
+}
+
+.servicios{
+    flex: 0 0 calc(33.3% - 1rem);
+
+}
+
+.servicios h3{
+    margin: 2rem 0;
+}
+
+
+.iconos{
+    background-color: var(--primary);
+    margin-top: 2rem;
+    margin: 0 auto;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    font-size: 5rem;
+    text-align: center;
+    padding-top: 4.5rem;
+    justify-content: space-around;
 }
 
 @media (max-width: 768px){
